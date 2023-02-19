@@ -1,0 +1,17 @@
+<h1>New Investment</h1>
+
+<%= form_for [@portfolio, @investment] do |f| %>
+  <%= f.label :symbol %>
+  <%= f.text_field :symbol %>
+
+  <%= f.label :purchase_price %>
+  <%= f.text_field :purchase_price %>
+
+  <%= f.label :shares %>
+  <%= f.number_field :shares %>
+
+  <%= f.label :purchase_date %>
+  <%= f.date_field :purchase_date %>
+
+  <%= f.submit "Add Investment" %>
+<% end %>

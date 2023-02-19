@@ -1,0 +1,6 @@
+<h1><%= @investment.symbol %></h1>
+
+<p>Purchase Price: <%= @investment.purchase_price %></p>
+<p>Shares: <%= @investment.shares %></p>
+<p>Purchase Date: <%= @investment.purchase_date %></p>
+<p>Current Price: <%= number_to_currency(@current_price) %></p>

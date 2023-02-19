@@ -1,0 +1,21 @@
+<h1><%= @portfolio.name %></h1>
+
+<p>Description: <%= @portfolio.description %></p>
+
+<h2>Current Value: <%= number_to_currency(@current_value) %></h2>
+<p>Daily Gain/Loss: <%= number_to_currency(@daily_gain_loss) %></p>
+<p>Overall Return: <%= number_to_percentage(@overall_return * 100, precision: 2) %></p>
+
+<% if @portfolio.investments.any? %>
+  <h3>Investments:</h3>
+  <ul>
+    <% @portfolio.investments.each do |investment| %>
+      <li><%= link_to investment.symbol, portfolio_investment_path(@portfolio, investment) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No investments yet.</p>
+<% end %>
+
+<%= link_to 'New Investment', new_portfolio_investment_path(@portfolio) %>
+<%= link_to 'Back to Portfolios', portfolios_path %>

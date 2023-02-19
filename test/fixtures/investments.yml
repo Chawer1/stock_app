@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  symbol: MyString
+  purchase_price: 9.99
+  shares: 1
+  purchase_date: 2023-02-18
+  portfolio: one
+
+two:
+  symbol: MyString
+  purchase_price: 9.99
+  shares: 1
+  purchase_date: 2023-02-18
+  portfolio: two
